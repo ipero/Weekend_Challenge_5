@@ -19,7 +19,7 @@ petApp.factory("PetService", ["$http", function($http){
     };
 
     var deleteData = function(data){
-
+          console.log(data);
           $http.delete("/pets/" + data).then(function(response){
           getData();
       });

@@ -1,18 +1,18 @@
 <div>
   <span>Sort pets by: </span>
-  <button ng-click="order('name')">Name</button>
-  <button ng-click="order('age')">Age</button>
-  <button ng-click="order('type')">Type</button
+  <button class="btn" ng-click="order('name')">Name</button>
+  <button class="btn" ng-click="order('age')">Age</button>
+  <button class="btn" ng-click="order('type')">Type</button
 </div>
 <div ng-repeat="pet in data.results |  orderBy:predicate:reverse ">
   <div class="pet">
     <div class="pet-desc">
-      <p>Pet number: {{$index+1}}</p>
+      <!-- <p>Pet number: {{$index+1}}</p> -->
       <p>Name: {{pet.name }}</p>
       <p>Type: {{pet.type}}</p>
       <p>Age: {{pet.age}}</p>
 
-      <button ng-click="deletePet(pet._id)">Delete</button>
+      <button class="btn btn-danger"  ng-click="deletePet(pet._id)">Delete</button>
     </div>
     <img ng-src="{{pet.urlimg}}" width="150px" height="150px"/>
   </div>

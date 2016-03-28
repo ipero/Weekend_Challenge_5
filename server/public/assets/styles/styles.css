@@ -2,17 +2,29 @@
   width:700px;
 }
 .pet{
-  background-color: #ccc;
+  background-color: #EBEBEB;
   height: 170px;
   margin-top: 10px;
+  border-radius: 5px;
 }
 .pet img{
   float: right;
   margin: 10px;
+  border-radius: 5px;
 
 }
 .pet-desc {
   width: 400px;
   padding: 15px;
   float: left;
+}
+
+.jumbotron {
+  background: url("/assets/img/tigers-pet.jpg") no-repeat;
+  color: white;
+
+}
+.jumbotron p {
+  text-shadow: 3px 3px 10px #000;
+  font-weight: bold;
 }

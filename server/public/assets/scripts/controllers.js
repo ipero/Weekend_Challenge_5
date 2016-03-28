@@ -5,7 +5,6 @@ petApp.controller("AddController", ["$scope", "PetService", function($scope, Pet
     //POST HERE
     $scope.submit = function(data){
       petService.postData(data);
-      $scope.addPet.$setPristine();
       $scope.petObject = {};
     };
 }]);
@@ -18,10 +17,7 @@ petApp.controller("ShowController", ["$scope", "PetService", function($scope, Pe
     $scope.data = PetService.petData;
 
     //$scope.deleteStuff = PetService.deleteData;
-    $scope.deletePet = function(item){
-      //var id = item.currentTarget.getAttribute("data-id");
-      var id = item;
-      console.log(id);
+    $scope.deletePet = function(id){
       petService.deleteData(id);
     };
     //sorting
