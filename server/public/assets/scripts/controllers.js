@@ -1,11 +1,12 @@
 petApp.controller("AddController", ["$scope", "PetService", function($scope, PetService){
-    var petObject = {};
+    $scope.petObject = {};
     var petService = PetService;
 
     //POST HERE
     $scope.submit = function(data){
       petService.postData(data);
-      petObject = {};
+      $scope.addPet.$setPristine();
+      $scope.petObject = {};
     };
 }]);
 

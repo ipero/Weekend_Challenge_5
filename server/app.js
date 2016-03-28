@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 mongoose.connect('mongodb://localhost/pet_app');
 mongoose.model("Pets", new Schema({"name" : String, "type" : String,
-                "age":String, "urlimg": String}));
+                "age":Number, "urlimg": String}));
 var Animal = mongoose.model("Pets");
 
 //DB STUFF
@@ -35,7 +35,7 @@ app.delete("/pets/:id", function(req, res){
     }
     res.status(200).send();
   });
-  
+
 });
 
 app.post("/pets", function(req,res){
